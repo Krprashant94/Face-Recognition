@@ -8,6 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+src/haarcascades
+src/faces
 build/
 develop-eggs/
 dist/
