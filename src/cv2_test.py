@@ -9,12 +9,13 @@ import cv2
 import numpy as np
 import os 
 
+database = ["0", "Pamela", "Prashant"]
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 detector = cv2.CascadeClassifier("haarcascades/haarcascade_frontalface_alt.xml");
 
 recognizer.read('trainer.yml')
 
-font = cv2.FONT_HERSHEY_SIMPLEX
+font = cv2.FONT_HERSHEY_PLAIN
 cam = cv2.VideoCapture(0)
 
 while True:
@@ -42,7 +43,7 @@ while True:
 
         # Put text describe who is in the picture
         cv2.rectangle(im, (x-22,y-90), (x+w+22, y-22), (0,255,0), -1)
-        cv2.putText(im, str(Id), (x,y-40), font, 1, (255,255,255), 3)
+        cv2.putText(im, database[Id], (x,y-40), font, 2, (255,255,255), 1)
 
     # Display the video frame with the bounded rectangle
     cv2.imshow('im',im) 
