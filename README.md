@@ -1,2 +1,2 @@
 # Face Recognition
-Undergoing Project
+mail at prashant.rcciit@acm.org for documatation 
